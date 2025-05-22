@@ -32,7 +32,11 @@ from rasa.core.utils import AvailableEndpoints
 import rasa.shared.utils.io
 from sanic import Sanic
 from asyncio import AbstractEventLoop
+import debugpy
 
+# Start the debug server on port 5678
+debugpy.listen(5678)
+print("Waiting for debugger attach...")
 
 logger = logging.getLogger()  # get the root logger
 
